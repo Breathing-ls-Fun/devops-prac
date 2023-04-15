@@ -21,5 +21,14 @@ else
     touch logs/error.log logs/access.log
 fi
 
+
+if [ -d "static" ] 
+then
+    echo "Static folder exists" 
+else
+    python3 manage.py collectstatic
+fi
+
+
 sudo chmod -R 777 logs
 echo "envsetup finished"
