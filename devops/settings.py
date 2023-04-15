@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0vqs8s*dlg5re8-8*f+x_%=l8&0(r4sj$d6s=w16iy*&g&sf4*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['34.228.21.15', 'localhost']
 
 
 # Application definition
@@ -74,10 +74,7 @@ WSGI_APPLICATION = 'devops.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    
 }
 
 
@@ -121,3 +118,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
